@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestBasicAuthProviderReturnExpectedAuthentication(t *testing.T) {
+func TestBasicAuthProviderReturnsExpectedAuthentication(t *testing.T) {
 	// Given
 	username := "ashley"
 	password := "was_here"

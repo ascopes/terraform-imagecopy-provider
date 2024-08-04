@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestAnonymousAuthProviderReturnExpectedAuthentication(t *testing.T) {
+func TestAnonymousAuthProviderReturnsExpectedAuthentication(t *testing.T) {
 	// Given
 	provider := NewAnonymousProvider()
 
