@@ -2,12 +2,14 @@ package auth
 
 import "github.com/google/go-containerregistry/pkg/authn"
 
-func NewAnonymousProvider() AuthenticatorFactory {
-	return &anonymousAuthProvider{}
+// Create an AuthFactory that produces an anonymous authenticator.
+func NewAnonymousAuthFactory() AuthFactory {
+	return &anonymousAuthFactory{}
 }
 
-type anonymousAuthProvider struct{}
+type anonymousAuthFactory struct{}
 
-func (*anonymousAuthProvider) CreateAuthenticator() authn.Authenticator {
+// Create an anonymous authenticator.
+func (*anonymousAuthFactory) CreateAuthenticator() authn.Authenticator {
 	return authn.Anonymous
 }

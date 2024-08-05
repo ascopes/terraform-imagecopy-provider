@@ -2,18 +2,21 @@ package auth
 
 import "github.com/google/go-containerregistry/pkg/authn"
 
-func NewBasicAuthProvider(username string, password string) AuthenticatorFactory {
-	return &basicAuthProvider{username, password}
+// Create an AuthFactory that produces a basic authenticator from the
+// given username and password.
+func NewBasicAuthFactory(username string, password string) AuthFactory {
+	return &basicAuthFactory{username, password}
 }
 
-type basicAuthProvider struct {
+type basicAuthFactory struct {
 	username string
 	password string
 }
 
-func (provider *basicAuthProvider) CreateAuthenticator() authn.Authenticator {
+// Create a basic authenticator.
+func (factory *basicAuthFactory) CreateAuthenticator() authn.Authenticator {
 	return &authn.Basic{
-		Username: provider.username,
-		Password: provider.password,
+		Username: factory.username,
+		Password: factory.password,
 	}
 }

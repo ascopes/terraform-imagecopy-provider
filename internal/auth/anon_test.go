@@ -7,12 +7,12 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestAnonymousAuthProviderReturnsExpectedAuthentication(t *testing.T) {
+func TestAnonymousAuthFactoryReturnsExpectedAuthentication(t *testing.T) {
 	// Given
-	provider := NewAnonymousProvider()
+	factory := NewAnonymousAuthFactory()
 
 	// When
-	auth := provider.CreateAuthenticator()
+	auth := factory.CreateAuthenticator()
 
 	// Then
 	assert.Same(t, authn.Anonymous, auth)

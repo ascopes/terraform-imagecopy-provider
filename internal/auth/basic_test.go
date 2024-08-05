@@ -6,14 +6,14 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestBasicAuthProviderReturnsExpectedAuthentication(t *testing.T) {
+func TestBasicAuthFactoryReturnsExpectedAuthentication(t *testing.T) {
 	// Given
 	username := "ashley"
 	password := "was_here"
-	provider := NewBasicAuthProvider(username, password)
+	factory := NewBasicAuthFactory(username, password)
 
 	// When
-	auth := provider.CreateAuthenticator()
+	auth := factory.CreateAuthenticator()
 	token, err := auth.Authorization()
 
 	// Then

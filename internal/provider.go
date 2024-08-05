@@ -15,7 +15,7 @@ func NewProvider() provider.Provider {
 }
 
 type providerImpl struct {
-	authenticatorProviders map[string]auth.AuthenticatorFactory
+	authFactories map[string]auth.AuthFactory
 }
 
 func (provider *providerImpl) Configure(context.Context, provider.ConfigureRequest, *provider.ConfigureResponse) {
