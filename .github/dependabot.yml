@@ -1,0 +1,17 @@
+version: 2
+
+updates:
+  - package-ecosystem: "github-actions"
+    schedule:
+      interval: "monthly"
+    target-branch: "main"
+    assignees:
+      - "ascopes"
+    labels: []
+
+  - package-ecosystem: "gomod"
+    schedule:
+      interval: "monthly"
+    assignees:
+      - "ascopes"
+    labels: [] 
