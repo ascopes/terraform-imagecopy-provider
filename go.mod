@@ -1,4 +1,4 @@
-module github.com/ascopes/terraform-imagecopy-provider
+module github.com/ascopes/terraform-provider-imagecopy
 
 go 1.22
 

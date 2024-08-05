@@ -3,7 +3,7 @@ package internal
 import (
 	"context"
 
-	"github.com/ascopes/terraform-imagecopy-provider/internal/auth"
+	"github.com/ascopes/terraform-provider-imagecopy/internal/auth"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
 	"github.com/hashicorp/terraform-plugin-framework/provider/schema"
