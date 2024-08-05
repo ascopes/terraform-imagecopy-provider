@@ -4,6 +4,7 @@ go 1.22
 
 require (
 	github.com/hashicorp/terraform-plugin-framework v1.10.0
+	github.com/hashicorp/terraform-plugin-framework-validators v0.13.0
 	github.com/stretchr/testify v1.8.2
 )
 
